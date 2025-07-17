@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfpol2y1rpcpd"]
+
+[ext_resource type="PackedScene" uid="uid://ctq41tcy36lj5" path="res://smooth-grid-controller/controller.tscn" id="1_8q5hc"]
+[ext_resource type="Texture2D" uid="uid://b646l0a56fy8c" path="res://icon.svg" id="2_vcfsn"]
+
+[node name="Player" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vcfsn")
+
+[node name="Controller" parent="." instance=ExtResource("1_8q5hc")]

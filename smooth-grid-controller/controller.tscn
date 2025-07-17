@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctq41tcy36lj5"]
+
+[ext_resource type="Script" uid="uid://b4ohrn0j14x35" path="res://smooth-grid-controller/controller.gd" id="1_t8urs"]
+
+[node name="Controller" type="Node"]
+script = ExtResource("1_t8urs")
+up_action = "ui_up"
+down_action = "ui_down"
+left_action = "ui_left"
+right_action = "ui_right"
+movement_speed = 50.0
+tile_size = 128
+input_delay = 0.01
+
+[node name="InputTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="InputTimer" to="." method="_on_input_timer_timeout"]
