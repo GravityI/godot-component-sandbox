@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfhovn2odoyap"]
+
+[ext_resource type="Shader" uid="uid://dyn4harq2gucb" path="res://juice/shockwave/shockwave.gdshader" id="1_nljg6"]
+[ext_resource type="Script" uid="uid://chicd6ggg1tp3" path="res://juice/shockwave/shockwave_rect.gd" id="2_l43fq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yakbh"]
+shader = ExtResource("1_nljg6")
+shader_parameter/shockwave_positions = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/shockwave_progresses = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/shockwave_count = 0
+shader_parameter/shockwave_strength = 0.05
+shader_parameter/shockwave_speed = 0.5
+shader_parameter/shockwave_width = 0.2
+shader_parameter/chroma_strength = 0.1
+
+[node name="FXCanvas" type="CanvasLayer"]
+
+[node name="ShockwaveRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_yakbh")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_l43fq")
