@@ -16,7 +16,7 @@ func _state_process(delta : float):
 	#Handle state logic and transitions
 	#Transition Example:
 	#if Input.is_action_just_pressed("ui_up"):
-		#StateMachine.change_state(JumpState)
+		#StateMachine.set_state(JumpState)
 	pass
 
 func _state_physics_process(delta : float):
