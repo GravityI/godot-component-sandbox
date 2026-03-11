@@ -1,0 +1,263 @@
+[gd_scene load_steps=15 format=3 uid="uid://bjuag67go07d"]
+
+[ext_resource type="Script" uid="uid://dq84yenhsis8b" path="res://main_menu/generic-menus/main-menu/main_menu.gd" id="1_j3xir"]
+[ext_resource type="FontFile" uid="uid://dxahha0xak308" path="res://main_menu/generic-menus/assets/LeroyLetteringLightBeta01.ttf" id="3_j3xir"]
+[ext_resource type="PackedScene" uid="uid://k21yw8v2bie6" path="res://main_menu/generic-menus/settings-menu/SettingsPopup.tscn" id="4_h4m2u"]
+
+[sub_resource type="Gradient" id="Gradient_j3xir"]
+offsets = PackedFloat32Array(0, 0.25, 0.5, 0.75, 1)
+colors = PackedColorArray(0.24705882, 0.29411766, 0.35686275, 1, 0.36438888, 0.41118878, 0.4762911, 1, 0.4230539, 0.46972436, 0.53600526, 1, 0.4817189, 0.52825993, 0.59571946, 1, 0.65771395, 0.7038666, 0.77486193, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 8
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ddb64"]
+gradient = SubResource("Gradient_j3xir")
+width = 512
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8lq11"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8yyf5"]
+content_margin_left = 4.0
+content_margin_top = 16.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s85qs"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3660"]
+content_margin_left = 4.0
+content_margin_top = 16.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iacf0"]
+content_margin_left = 4.0
+content_margin_top = 16.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4m2u"]
+content_margin_left = 0.0
+content_margin_top = 16.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.16470589, 0.9882353, 0.59607846, 0.2627451)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1u3f4"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcgey"]
+content_margin_left = 4.0
+content_margin_top = 16.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxeqj"]
+content_margin_left = 4.0
+content_margin_top = 16.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j3xir")
+
+[node name="BackgroundGradient" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_ddb64")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.13725491)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LogoControl" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 0.5
+offset_right = -128.0
+
+[node name="GameLogo" type="TextureRect" parent="LogoControl"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.286
+anchor_bottom = 1.0
+offset_top = -0.5
+offset_right = -0.12799072
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_8lq11")
+stretch_mode = 5
+
+[node name="GameTitle" type="Label" parent="LogoControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.286
+offset_left = 64.0
+offset_right = -64.12799
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 64
+text = "GAME TITLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonControl" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 64.0
+offset_right = 576.0
+offset_bottom = 64.0
+grow_vertical = 2
+
+[node name="ButtonContainer" type="VBoxContainer" parent="ButtonControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.5
+offset_top = -205.0
+offset_right = 169.5
+offset_bottom = 205.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="PlayButton" type="Button" parent="ButtonControl/ButtonContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_j3xir")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_8yyf5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s85qs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g3660")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_iacf0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_h4m2u")
+text = "START"
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="SettingsButton" type="Button" parent="ButtonControl/ButtonContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_j3xir")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_8yyf5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1u3f4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xcgey")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_nxeqj")
+theme_override_styles/focus = SubResource("StyleBoxFlat_h4m2u")
+text = "SETTINGS"
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="CreditsButton" type="Button" parent="ButtonControl/ButtonContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_j3xir")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_8yyf5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1u3f4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xcgey")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_nxeqj")
+theme_override_styles/focus = SubResource("StyleBoxFlat_h4m2u")
+disabled = true
+text = "CREDITS"
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="QuitButton" type="Button" parent="ButtonControl/ButtonContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_j3xir")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_8yyf5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1u3f4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xcgey")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_nxeqj")
+theme_override_styles/focus = SubResource("StyleBoxFlat_h4m2u")
+text = "QUIT"
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="SettingsPopup" parent="." instance=ExtResource("4_h4m2u")]
+visible = false
+script = null
+
+[connection signal="button_down" from="ButtonControl/ButtonContainer/PlayButton" to="." method="_on_play_button_down"]
+[connection signal="button_down" from="ButtonControl/ButtonContainer/SettingsButton" to="." method="_on_settings_button_down"]
+[connection signal="button_down" from="ButtonControl/ButtonContainer/CreditsButton" to="." method="_on_credits_button_down"]
+[connection signal="button_down" from="ButtonControl/ButtonContainer/QuitButton" to="." method="_on_quit_button_down"]
